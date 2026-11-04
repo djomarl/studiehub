@@ -1,0 +1,3 @@
+# Inloggen via je eigen adres (nodig voor de app op je beginscherm, vooral op iPhone)
+/__/auth/*      https://studiehub-1f47c.firebaseapp.com/__/auth/:splat      200
+/__/firebase/*  https://studiehub-1f47c.firebaseapp.com/__/firebase/:splat  200
