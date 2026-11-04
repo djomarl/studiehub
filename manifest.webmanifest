@@ -1,26 +1,91 @@
 {
-  "id": "./",
+  "id": "/",
   "name": "StudieHub",
   "short_name": "StudieHub",
-  "description": "Je studie op één plek: taken, opdrachten, sprints en voortgang.",
+  "description": "Je studie op één plek: taken, deadlines, opdrachten, sprints, focus-timer en voortgang.",
   "start_url": "./?bron=app",
   "scope": "./",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "lang": "nl",
   "dir": "ltr",
-  "categories": ["education", "productivity"],
+  "categories": [
+    "education",
+    "productivity"
+  ],
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "shortcuts": [
-    { "name": "Noteer iets", "short_name": "Noteer", "url": "./?actie=noteer", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
-    { "name": "Vandaag", "url": "./#/vandaag", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
-    { "name": "Voortgang", "url": "./?actie=voortgang", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+    {
+      "name": "Noteer iets",
+      "short_name": "Noteer",
+      "url": "./?actie=noteer",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Vandaag",
+      "url": "./#/vandaag",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Voortgang",
+      "url": "./?actie=voortgang",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-narrow.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Vandaag: wat je moet doen, je deadlines en je week"
+    },
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1440x900",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "StudieHub op je laptop"
+    }
   ]
 }
