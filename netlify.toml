@@ -1,3 +1,5 @@
+# StudieHub op Netlify: er wordt niets gebouwd op Netlify.
+# De map dist/ is al kant-en-klaar (gebouwd met `node build.mjs --web`) en wordt zo gepubliceerd.
 [build]
-  publish = "."
+  publish = "dist"
   command = ""

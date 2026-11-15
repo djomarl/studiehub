@@ -1,5 +1,5 @@
 // Offline-hulp: eerst het netwerk (zo heb je altijd de nieuwste versie), zonder internet de laatst bewaarde versie.
-const CACHE = 'studiehub-v3';
+const CACHE = 'studiehub-v4';
 const SHELL = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).catch(() => {})); });
 self.addEventListener('activate', e => e.waitUntil(
