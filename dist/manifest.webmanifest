@@ -1,10 +1,10 @@
 {
-  "id": "/",
+  "id": "/?bron=app",
   "name": "StudieHub",
   "short_name": "StudieHub",
   "description": "Je studie op één plek: taken, deadlines, opdrachten, sprints, focus-timer en voortgang.",
-  "start_url": "./?bron=app",
-  "scope": "./",
+  "start_url": "/?bron=app",
+  "scope": "/",
   "display": "standalone",
   "display_override": [
     "standalone",
@@ -21,19 +21,19 @@
   ],
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-maskable-512.png",
+      "src": "/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -43,45 +43,48 @@
     {
       "name": "Noteer iets",
       "short_name": "Noteer",
-      "url": "./?actie=noteer",
+      "url": "/?actie=noteer",
       "icons": [
         {
-          "src": "icon-192.png",
-          "sizes": "192x192"
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
         }
       ]
     },
     {
       "name": "Vandaag",
-      "url": "./#/vandaag",
+      "url": "/#/vandaag",
       "icons": [
         {
-          "src": "icon-192.png",
-          "sizes": "192x192"
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
         }
       ]
     },
     {
       "name": "Voortgang",
-      "url": "./?actie=voortgang",
+      "url": "/?actie=voortgang",
       "icons": [
         {
-          "src": "icon-192.png",
-          "sizes": "192x192"
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
         }
       ]
     }
   ],
   "screenshots": [
     {
-      "src": "screenshot-narrow.png",
+      "src": "/screenshot-narrow.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Vandaag: wat je moet doen, je deadlines en je week"
     },
     {
-      "src": "screenshot-wide.png",
+      "src": "/screenshot-wide.png",
       "sizes": "1440x900",
       "type": "image/png",
       "form_factor": "wide",

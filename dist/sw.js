@@ -1,6 +1,6 @@
 // Offline-hulp: eerst het netwerk (zo heb je altijd de nieuwste versie), zonder internet de laatst bewaarde versie.
-const CACHE = 'studiehub-v4';
-const SHELL = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
+const CACHE = 'studiehub-v5';
+const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/icon-192.png', '/icon-512.png', '/apple-touch-icon.png'];
 self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).catch(() => {})); });
 self.addEventListener('activate', e => e.waitUntil(
   caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())
@@ -19,8 +19,8 @@ self.addEventListener('fetch', e => {
   if (!mine && !sdk) return;               // Google-login, database, agenda en Canvas-links gaan altijd direct
   if (mine && u.pathname.startsWith('/__/')) return; // inloggen via je eigen adres: nooit bewaren
   e.respondWith(fetch(r).then(res => {
-    if (res.ok && res.type !== 'opaque') { const c = res.clone(); caches.open(CACHE).then(cache => cache.put(r.mode === 'navigate' ? './' : r, c)); }
+    if (res.ok && res.type !== 'opaque') { const c = res.clone(); caches.open(CACHE).then(cache => cache.put(r.mode === 'navigate' ? '/' : r, c)); }
     return res;
-  }).catch(() => caches.match(r.mode === 'navigate' ? './' : r, { ignoreSearch: r.mode === 'navigate' })
-    .then(m => m || (r.mode === 'navigate' ? caches.match('./') : Response.error()))));
+  }).catch(() => caches.match(r.mode === 'navigate' ? '/' : r, { ignoreSearch: r.mode === 'navigate' })
+    .then(m => m || (r.mode === 'navigate' ? caches.match('/') : Response.error()))));
 });
